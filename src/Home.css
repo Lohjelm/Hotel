@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif; /* Elegant serif font for body text */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Pure white background */
+    color: #333333; /* Dark gray text for readability */
+    line-height: 1.8; /* Increase line height for improved readability */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px; /* Ample padding for hero section */
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    position: relative; /* Positioning for children */
+    overflow: hidden; /* Hide overflow for video */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the area */
+    z-index: 0; /* Layering under content */
+    filter: brightness(0.6); /* Darken video for better text visibility */
+}
+
+/* Overlay for better text visibility */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay for contrast */
+    z-index: 1; /* Above the video */
+}
+
+.hero-content {
+    position: relative; /* Position for z-indexing */
+    z-index: 2; /* Above the overlay */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+    font-size: 4rem; /* Large title for impact */
+    margin: 0 0 20px; /* Spacing around title */
+    font-weight: 700; /* Bold font for emphasis */
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+.hero-content p {
+    font-size: 1.25rem; /* Slightly larger subtitle font size */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the paragraph */
+    font-weight: 300; /* Lighter weight for elegance */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+
+/* Section Styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px; /* Ample padding for sections */
+    margin: 40px auto; /* Center with auto margin */
+    max-width: 1000px; /* Max width for better layout */
+    background: #ffffff; /* Soft white for sections */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 15px; /* Softer corners */
+    position: relative; /* Position to allow stacking context */
+    z-index: 4; /* Ensure sections are above the video and overlay */
+}
+
+.hbtn{
+    
+    margin-top: 40px;
+    background-color: #9e802e; /* Primary button color */
+  color: white; /* White text on buttons */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-weight: bold; /* Bold text for emphasis */
+  z-index: 3;
+}
+/* Section Headings */
+h3 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for section headings */
+    color: #333333; /* Dark gray for section headings */
+    margin-bottom: 20px; /* Spacing below headings */
+    font-weight: 600; /* Semi-bold weight for emphasis */
+    font-size: 2.5rem; /* Larger font for section headings */
+    letter-spacing: 0.5px; /* Slight letter spacing for a refined look */
+}
+
+/* Service List Flexbox Layout */
+.service-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: space-around; /* Space items evenly */
+    width: 100%; /* Full width */
+}
+
+.service-item {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, and basis for items */
+    margin: 10px; /* Space between items */
+    text-align: center; /* Center text in service items */
+    color: #333333; /* Dark gray color for service items */
+    transition: transform 0.3s ease; /* Add hover effect */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.service-item h4 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for service item titles */
+    font-size: 1.8rem; /* Size for service item titles */
+    margin-bottom: 10px; /* Space below service titles */
+}
+
+.service-item p {
+    font-size: 1rem; /* Size for service item descriptions */
+    font-weight: 400; /* Normal weight for descriptions */
+}
+
+/* Gallery Styles */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive layout */
+    justify-content: center; /* Center items */
+}
+
+.gallery-grid img {
+    margin: 10px; /* Space around images */
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Testimonials Section */
+.testimonial-list {
+    display: flex;
+    flex-direction: column; /* Stack testimonials vertically */
+    align-items: center; /* Center content */
+}
+
+.testimonial-list blockquote {
+    max-width: 600px; /* Limit the width of quotes */
+    text-align: center; /* Center quotes */
+    margin: 20px 0; /* Space between testimonials */
+    color: #333333; /* Dark gray color for testimonials */
+    padding-left: 20px; /* Padding for better appearance */
+    font-style: italic; /* Italicize quotes */
+    font-size: 1.2rem; /* Increase font size for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem; /* Smaller title for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller subtitle for mobile */
+    }
+
+    section {
+        padding: 40px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .service-item {
+        flex: 1 1 100%; /* Stack service items vertically on small screens */
+    }
+
+    .gallery-grid img {
+        width: 100%; /* Ensure images are responsive */
+        max-width: 300px; /* Limit max width */
+    }
+}
+
+/* About Section Styles */
+
+.about p {
+    padding: 20px; /* Adds space inside the paragraph */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about p {
+        margin: 15px 0; /* Smaller margin for mobile devices */
+        padding: 5px; /* Smaller padding for mobile devices */
+    }
+    
+    .about {
+        padding: 30px 10px; /* Adjust padding for mobile devices */
+    }
+}
